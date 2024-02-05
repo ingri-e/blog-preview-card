@@ -1,0 +1,124 @@
+/*
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+
+## Typography
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
+- Weights: 600, 800
+*/
+
+:root {
+  /*Primary*/
+  --yellow: hsl(47, 88%, 63%);
+
+  /*Neutral*/
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree-VariableFont_wght.ttf")
+    format("ttf-variations");
+  font-weight: 100 1000;
+}
+
+* {
+  font-family: "Figtree", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--yellow);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 384px 1fr;
+  grid-template-rows: 1fr auto 1fr;
+}
+
+article {
+  background-color: var(--white);
+  grid-column-start: 2;
+  grid-row-start: 2;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--black);
+  box-shadow: 0.5rem 0.5rem var(--black);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+h1 {
+  margin: 0.75rem 0;
+  font-size: 1.5rem;
+}
+
+.blog-type-label {
+  display: inline-block;
+  background-color: var(--yellow);
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 800;
+}
+
+#blog-preview-details {
+  margin: 1.5rem 0;
+}
+
+#blog-preview-details > p {
+  font-size: 1rem;
+  color: var(--grey);
+  line-height: 1.5rem;
+  font-weight: 350;
+}
+
+#blog-author {
+  display: grid;
+  grid-template-columns: 2rem auto;
+  font-weight: 800;
+}
+
+#blog-author p {
+  margin-left: 0.75rem;
+  max-width: 100%;
+  padding: 0.5rem 0;
+}
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  grid-row-start: 3;
+  grid-column-start: 2;
+  margin: 0.5rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+article:hover h1 {
+  color: var(--yellow);
+}
+
+article:hover {
+  box-shadow: 1rem 1rem var(--black);
+}
